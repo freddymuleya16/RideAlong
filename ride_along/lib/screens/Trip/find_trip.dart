@@ -26,7 +26,7 @@ class FindTripDialog extends StatelessWidget {
     return StatefulBuilder(
       builder: (BuildContext context, setState) {
         return AlertDialog(
-          backgroundColor: _isDark ? kDarkBackgroundColor2 : kBackgroundColor,
+          backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -35,7 +35,7 @@ class FindTripDialog extends StatelessWidget {
             style: GoogleFonts.ubuntu(
                 fontSize: 22.5,
                 fontWeight: FontWeight.w600,
-                color: _isDark ? kBackgroundColor : kDarkBackgroundColor),
+                color: _isDark ? kBackgroundColor : kBackgroundColorDark),
           ),
           content: Container(
             height: 220,
@@ -48,7 +48,7 @@ class FindTripDialog extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       color: _isDark
                           ? kBackgroundColor.withOpacity(0.8)
-                          : kDarkBackgroundColor.withOpacity(0.8)),
+                          : kBackgroundColorDark.withOpacity(0.8)),
                   decoration: InputDecoration(
                     focusedBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.cyan, width: 2),
@@ -60,7 +60,7 @@ class FindTripDialog extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: _isDark
                             ? kBackgroundColor.withOpacity(0.8)
-                            : kDarkBackgroundColor.withOpacity(0.8)),
+                            : kBackgroundColorDark.withOpacity(0.8)),
                   ),
                   onChanged: (value) {
                     _origin = value;
@@ -82,7 +82,7 @@ class FindTripDialog extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       color: _isDark
                           ? kBackgroundColor.withOpacity(0.8)
-                          : kDarkBackgroundColor.withOpacity(0.8)),
+                          : kBackgroundColorDark.withOpacity(0.8)),
                   decoration: InputDecoration(
                     focusedBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.cyan, width: 2),
@@ -94,7 +94,7 @@ class FindTripDialog extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: _isDark
                             ? kBackgroundColor.withOpacity(0.8)
-                            : kDarkBackgroundColor.withOpacity(0.8)),
+                            : kBackgroundColorDark.withOpacity(0.8)),
                   ),
                   onChanged: (value) {
                     _destination = value;
@@ -125,7 +125,7 @@ class FindTripDialog extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     color: _isDark
                         ? kBackgroundColor.withOpacity(0.9)
-                        : kDarkBackgroundColor),
+                        : kBackgroundColorDark),
               ),
               onPressed: () {
                 _destinationErr = "";

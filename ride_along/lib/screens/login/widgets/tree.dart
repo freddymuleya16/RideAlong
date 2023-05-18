@@ -29,8 +29,9 @@ class _TreeState extends State<Tree> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          'assets/images/tree.png',
+          'assets/images/logo.png',
           height: 250,
+          color: kTextColorLight,
         ),
       ],
     );

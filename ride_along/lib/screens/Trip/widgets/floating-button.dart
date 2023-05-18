@@ -40,12 +40,12 @@ class _RequestFloatingButtonState extends State<RequestFloatingButton> {
       duration: _duration,
       child: FloatingActionButton(
         onPressed: widget.onPressed,
-        backgroundColor: _isDark ? kBackgroundColor : kSecondaryColor,
+        backgroundColor: _isDark ? kBackgroundColor : kBackgroundColorDark,
         highlightElevation: 3,
         child: Icon(
           Icons.drive_eta,
           size: _isDark ? 33 : 30,
-          color: _isDark ? kDarkPrimaryColor : Colors.white,
+          color: _isDark ? kPrimaryColorDark : kTextColorLight,
         ),
       ),
     );

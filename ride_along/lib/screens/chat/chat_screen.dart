@@ -66,7 +66,7 @@ class _ChatScreenState extends State<ChatScreen> {
     if (chatId == null) {
       return Center(
         child: CircularProgressIndicator(
-          color: _isDark ? Colors.white : kSecondaryColor,
+          color: _isDark ? kTextColorLight : kBackgroundColorDark,
         ),
       );
     }
@@ -82,7 +82,7 @@ class _ChatScreenState extends State<ChatScreen> {
             if (!snapshot.hasData) {
               return Center(
                 child: CircularProgressIndicator(
-                  color: _isDark ? Colors.white : kSecondaryColor,
+                  color: _isDark ? kTextColorLight : kBackgroundColorDark,
                 ),
               );
             }
@@ -119,7 +119,7 @@ class _ChatScreenState extends State<ChatScreen> {
         padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
         child: Container(
           decoration: BoxDecoration(
-              color: Colors.white,
+              color: kTextColorLight,
               border: Border.all(color: Colors.grey.shade500),
               borderRadius: BorderRadius.circular(16)),
           child: Row(

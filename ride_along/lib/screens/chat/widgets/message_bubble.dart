@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ride_along/constants/colors.dart';
 
 class MessageBubble extends StatelessWidget {
   final String message;
@@ -37,7 +38,7 @@ class MessageBubble extends StatelessWidget {
                     bottomRight: Radius.circular(30.0),
                   ),
             elevation: 5.0,
-            color: !isMe ? Colors.lightBlueAccent : Colors.white,
+            color: !isMe ? Colors.lightBlueAccent : kTextColorLight,
             child: Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -48,7 +49,7 @@ class MessageBubble extends StatelessWidget {
                     Text(
                       message,
                       style: TextStyle(
-                        color: !isMe ? Colors.white : Colors.black54,
+                        color: !isMe ? kTextColorLight : Colors.black54,
                         fontSize: 15.0,
                       ),
                     ),
@@ -58,7 +59,7 @@ class MessageBubble extends StatelessWidget {
                     Text(
                       time,
                       style: TextStyle(
-                        color: !isMe ? Colors.white : Colors.black54,
+                        color: !isMe ? kTextColorLight : Colors.black54,
                         fontSize: 9.0,
                       ),
                     ),

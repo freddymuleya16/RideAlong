@@ -64,7 +64,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
     var _isDark = isDark(context);
     return SafeArea(
       child: Scaffold(
-        backgroundColor: _isDark ? kDarkBackgroundColor : kBackgroundColor,
+        backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
         // appBar: AppBar(
         //   // Here we take the value from the MyHomePage object that was created by
         //   // the App.build method, and use it to set our appbar title.
@@ -84,7 +84,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                   'Check your \n Email',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.ubuntu(
-                      color: _isDark ? Colors.white : kSecondaryColor,
+                      color: _isDark ? kTextColorLight : kBackgroundColorDark,
                       fontWeight: FontWeight.w500,
                       fontSize: 16),
                 ),
@@ -97,7 +97,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                     'We have sent you a Email on  ${auth.currentUser?.email}',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.ubuntu(
-                        color: _isDark ? Colors.white : kSecondaryColor,
+                        color: _isDark ? kTextColorLight : kBackgroundColorDark,
                         fontWeight: FontWeight.w500,
                         fontSize: 16),
                   ),
@@ -106,7 +106,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
               const SizedBox(height: 16),
               Center(
                   child: CircularProgressIndicator(
-                color: _isDark ? Colors.white : kSecondaryColor,
+                color: _isDark ? kTextColorLight : kBackgroundColorDark,
               )),
               const SizedBox(height: 8),
               Padding(
@@ -116,7 +116,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                     'Verifying email....',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.ubuntu(
-                        color: _isDark ? Colors.white : kSecondaryColor,
+                        color: _isDark ? kTextColorLight : kBackgroundColorDark,
                         fontWeight: FontWeight.w500,
                         fontSize: 16),
                   ),
@@ -131,13 +131,15 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                     child: ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: _isDark
-                            ? MaterialStateProperty.all<Color>(Colors.white)
-                            : MaterialStateProperty.all<Color>(kSecondaryColor),
+                            ? MaterialStateProperty.all<Color>(kTextColorLight)
+                            : MaterialStateProperty.all<Color>(
+                                kBackgroundColorDark),
                       ),
                       child: Text(
                         'Resend',
                         style: GoogleFonts.ubuntu(
-                          color: !_isDark ? Colors.white : kSecondaryColor,
+                          color:
+                              !_isDark ? kTextColorLight : kBackgroundColorDark,
                         ),
                       ),
                       onPressed: () {
@@ -155,13 +157,15 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                     child: ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: _isDark
-                            ? MaterialStateProperty.all<Color>(Colors.white)
-                            : MaterialStateProperty.all<Color>(kSecondaryColor),
+                            ? MaterialStateProperty.all<Color>(kTextColorLight)
+                            : MaterialStateProperty.all<Color>(
+                                kBackgroundColorDark),
                       ),
                       child: Text(
                         'Cancel',
                         style: GoogleFonts.ubuntu(
-                          color: !_isDark ? Colors.white : kSecondaryColor,
+                          color:
+                              !_isDark ? kTextColorLight : kBackgroundColorDark,
                         ),
                       ),
                       onPressed: signUserOut,

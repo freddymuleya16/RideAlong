@@ -87,7 +87,7 @@ class _TasksItemState extends State<TasksItem> {
                       blurRadius: 0.001,
                     )
                   ],
-                  color: _isDark ? kDarkBackgroundColor : Colors.white),
+                  color: _isDark ? kTextColorDark : kTextColorLight),
               child: Row(
                 children: [
                   Padding(
@@ -98,7 +98,7 @@ class _TasksItemState extends State<TasksItem> {
                         activeColor: Colors.grey,
                         //inactiveColor:
                         //    colors[int.parse(_.tasks[widget.index][1])],
-                        checkColor: Colors.white,
+                        checkColor: kTextColorLight,
                         value: _.tasks[widget.index][2] == 'done',
                         onChanged: (value) {
                           //updateTask(index: widget.index);
@@ -112,7 +112,7 @@ class _TasksItemState extends State<TasksItem> {
                       color: _.tasks[widget.index][2] == 'done'
                           ? Colors.grey
                           : _isDark
-                              ? Colors.white
+                              ? kTextColorLight
                               : Colors.amberAccent,
                       fontWeight: FontWeight.w500,
                       fontSize: 17.5,
@@ -134,13 +134,13 @@ class _TasksItemState extends State<TasksItem> {
       height: 70,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
-          color: _isDark ? kDarkBackgroundColor2 : kBackgroundColor),
+          color: _isDark ? kBackgroundColorDark : kBackgroundColor),
       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Padding(
           padding: const EdgeInsets.only(left: 12.5, right: 5),
           child: Icon(
             FontAwesomeIcons.trashAlt,
-            color: _isDark ? Colors.white : Colors.grey,
+            color: _isDark ? kTextColorLight : Colors.grey,
             size: 22.5,
           ),
         ),
@@ -149,7 +149,7 @@ class _TasksItemState extends State<TasksItem> {
           child: Text(
             'The task was deleted',
             style: GoogleFonts.ubuntu(
-              color: _isDark ? Colors.white : Colors.grey,
+              color: _isDark ? kTextColorLight : Colors.grey,
               fontWeight: FontWeight.w500,
               fontSize: 17.5,
             ),

@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
         : setSystemUIOverlayStyle(
             systemUIOverlayStyle: SystemUIOverlayStyle.LIGHT);
     return Scaffold(
-      backgroundColor: _isDark ? kDarkBackgroundColor : kBackgroundColor,
+      backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
       body: SafeArea(
           child: Center(
         child: SingleChildScrollView(
@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 25,
               ),
-              AnimateWidget(seconds: 1, child: Tree(isDark: _isDark)),
+              AnimateWidget(seconds: 2, child: Tree(isDark: _isDark)),
               const SizedBox(
                 height: 10,
               ),
@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Text(
                   "Welcome back you've been missed!",
                   style: GoogleFonts.ubuntu(
-                      color: _isDark ? Colors.white : kSecondaryColor,
+                      color: _isDark ? kTextColorLight : kBackgroundColorDark,
                       fontWeight: FontWeight.w900,
                       fontSize: 16),
                 ),
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 25,
               ),
               AnimateWidget(
-                seconds: 3,
+                seconds: 2,
                 child: CustomInputField(
                     isDark: _isDark,
                     name: "Email",
@@ -74,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 10,
               ),
               AnimateWidget(
-                seconds: 4,
+                seconds: 2,
                 child: CustomInputField(
                   isDark: _isDark,
                   name: "Password",
@@ -86,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 10,
               ),
               AnimateWidget(
-                seconds: 5,
+                seconds: 2,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40.0),
                   child: Row(
@@ -105,8 +105,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               "Forgot password?",
                               style: GoogleFonts.ubuntu(
-                                  color:
-                                      _isDark ? Colors.white : kSecondaryColor,
+                                  color: _isDark
+                                      ? kTextColorLight
+                                      : kBackgroundColorDark,
                                   fontWeight: FontWeight.w700,
                                   fontSize: 14),
                             ),
@@ -119,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 15,
               ),
               AnimateWidget(
-                seconds: 6,
+                seconds: 2,
                 child: LoginButton(
                     title: "Login",
                     isDark: _isDark,
@@ -133,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 25,
               ),
               AnimateWidget(
-                seconds: 7,
+                seconds: 4,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Row(
@@ -149,7 +150,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           'Or continue with',
                           style: GoogleFonts.ubuntu(
-                              color: _isDark ? Colors.white : kSecondaryColor,
+                              color: _isDark
+                                  ? kTextColorLight
+                                  : kBackgroundColorDark,
                               fontWeight: FontWeight.w600,
                               fontSize: 14),
                         ),
@@ -168,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 25,
               ),
               AnimateWidget(
-                seconds: 8,
+                seconds: 4,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
@@ -186,7 +189,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 25,
               ),
               AnimateWidget(
-                seconds: 9,
+                seconds: 4,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -194,8 +197,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       "Not a member?",
                       style: GoogleFonts.ubuntu(
                           color: _isDark
-                              ? Colors.white.withOpacity(0.75)
-                              : kDarkBackgroundColor.withOpacity(0.75),
+                              ? kTextColorLight.withOpacity(0.75)
+                              : kBackgroundColorDark.withOpacity(0.75),
                           fontWeight: FontWeight.w400,
                           fontSize: 16),
                     ),
@@ -214,7 +217,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           "Register now!",
                           style: GoogleFonts.ubuntu(
-                              color: _isDark ? Colors.white : kSecondaryColor,
+                              color: _isDark
+                                  ? kTextColorLight
+                                  : kBackgroundColorDark,
                               fontWeight: FontWeight.w600,
                               fontSize: 14),
                         ),

@@ -28,11 +28,11 @@
 //                     textAlign: TextAlign.left,
 //                     maxLength: 25,
 //                     style: GoogleFonts.ubuntu(
-//                         color: _isDark ? Colors.white : __.color,
+//                         color: _isDark ? kTextColorLight : __.color,
 //                         fontSize: 25,
 //                         fontWeight: FontWeight.w700,
-//                         decorationColor: Colors.white),
-//                     cursorColor: _isDark ? Colors.white : __.color,
+//                         decorationColor: kTextColorLight),
+//                     cursorColor: _isDark ? kTextColorLight : __.color,
 //                     cursorHeight: 35,
 //                     decoration: InputDecoration(
 //                       border: InputBorder.none,
@@ -43,7 +43,7 @@
 //                       counterText: '',
 //                       hintStyle: GoogleFonts.ubuntu(
 //                           color: _isDark
-//                               ? Colors.white.withOpacity(0.8)
+//                               ? kTextColorLight.withOpacity(0.8)
 //                               : Colors.grey,
 //                           fontSize: 21.0),
 //                       hintText: "Enter task title",
@@ -65,7 +65,7 @@
 //                     width: 125,
 //                     height: 50,
 //                     decoration: BoxDecoration(
-//                       color: Colors.white,
+//                       color: kTextColorLight,
 //                       borderRadius: BorderRadius.circular(25),
 //                       boxShadow: [
 //                         BoxShadow(
@@ -113,7 +113,7 @@
 //                       width: 50,
 //                       height: 50,
 //                       decoration: BoxDecoration(
-//                         color: Colors.white,
+//                         color: kTextColorLight,
 //                         borderRadius: BorderRadius.circular(25),
 //                         boxShadow: [
 //                           BoxShadow(
@@ -138,7 +138,7 @@
 //                             height: 20,
 //                             width: 20,
 //                             decoration: BoxDecoration(
-//                               color: Colors.white,
+//                               color: kTextColorLight,
 //                               borderRadius: BorderRadius.circular(25),
 //                             ),
 //                           ),

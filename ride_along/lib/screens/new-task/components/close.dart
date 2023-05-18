@@ -29,7 +29,7 @@
 //                       size: 50,
 //                       color: _isDark
 //                           ? kBackgroundColor
-//                           : kSecondaryColor.withOpacity(0.75)),
+//                           : kBackgroundColorDark.withOpacity(0.75)),
 //                   onTap: () {
 //                     Navigator.pop(context);
 //                   },

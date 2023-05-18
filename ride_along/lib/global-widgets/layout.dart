@@ -56,7 +56,7 @@ class _LayoutState extends State<Layout> {
     // startHomeAnimations(homeAnimationsController: homeAnimationsController);
 
     return AdvancedDrawer(
-      backdropColor: isDark ? kDarkBackgroundColor : kSecondaryColor,
+      backdropColor: isDark ? kTextColorDark : kPrimaryColor,
       controller: drawer.advancedDrawerController,
       animationCurve: Curves.easeInOut,
       animationDuration: const Duration(milliseconds: 300),
@@ -69,7 +69,7 @@ class _LayoutState extends State<Layout> {
       ),
       drawer: HomeDrawer(),
       child: Scaffold(
-        backgroundColor: isDark ? kDarkBackgroundColor2 : kBackgroundColor,
+        backgroundColor: isDark ? kBackgroundColorDark : Colors.white,
         body: SafeArea(
             child: Column(
           children: [const Navbar(), ...widget.children],

@@ -53,7 +53,7 @@
 //               child: Text(
 //                 "Cancel",
 //                 style: GoogleFonts.ubuntu(
-//                     color: kSecondaryColor,
+//                     color: kBackgroundColorDark,
 //                     fontWeight: FontWeight.w600,
 //                     fontSize: 15),
 //               ),
@@ -68,7 +68,7 @@
 //               child: Text(
 //                 "Change",
 //                 style: GoogleFonts.ubuntu(
-//                     color: kSecondaryColor,
+//                     color: kBackgroundColorDark,
 //                     fontWeight: FontWeight.w600,
 //                     fontSize: 15),
 //               ),
@@ -103,7 +103,7 @@
 //                 Flexible(
 //                   child: Icon(
 //                     Icons.check_circle_outline_rounded,
-//                     color: Colors.white,
+//                     color: kTextColorLight,
 //                     size: 33.3,
 //                   ),
 //                 ),

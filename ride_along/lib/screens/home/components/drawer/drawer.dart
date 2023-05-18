@@ -4,17 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ride_along/constants/colors.dart';
+import 'package:ride_along/constants/is_dark.dart';
 import 'package:ride_along/controllers/main-controller.dart';
 import 'package:ride_along/screens/home/components/drawer/items/items.dart';
 
 class HomeDrawer extends StatelessWidget {
-  bool _isDark = false;
   @override
   Widget build(BuildContext context) {
-    final Brightness brightnessValue =
-        MediaQuery.of(context).platformBrightness;
-    _isDark = brightnessValue == Brightness.dark;
-
+    bool _isDark = isDark(context);
     return SafeArea(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,7 +24,7 @@ class HomeDrawer extends StatelessWidget {
               padding: EdgeInsets.only(top: 25, bottom: 25, left: 25),
               child: Icon(
                 Icons.drive_eta,
-                color: Colors.white,
+                color: kTextColorLight,
                 size: MediaQuery.of(context).size.width * 0.55,
               ),
             ),
@@ -36,9 +34,9 @@ class HomeDrawer extends StatelessWidget {
                   padding: EdgeInsets.only(left: 40),
                   child:
                       Text(FirebaseAuth.instance.currentUser?.displayName ?? "",
-                          textScaleFactor: 0.9,
+                          textScaleFactor: 0.8,
                           style: GoogleFonts.ubuntu(
-                            color: Colors.white,
+                            color: kTextColorLight,
                             fontWeight: FontWeight.w800,
                             fontSize: 35,
                           )),
@@ -52,7 +50,7 @@ class HomeDrawer extends StatelessWidget {
                 //   child:
                 //       Text(FirebaseAuth.instance.currentUser?.displayName ?? "",
                 //           style: GoogleFonts.ubuntu(
-                //             color: Colors.white.withOpacity(0.7),
+                //             color: kTextColorLight.withOpacity(0.7),
                 //             fontWeight: FontWeight.w700,
                 //             fontSize: 12.5,
                 //           )),
@@ -66,7 +64,7 @@ class HomeDrawer extends StatelessWidget {
           padding: EdgeInsets.only(bottom: 15),
           child: Text("Copyright ©2023 | Freddy Muleya",
               style: GoogleFonts.ubuntu(
-                  color: Colors.white,
+                  color: kTextColorLight,
                   fontSize: 12,
                   fontWeight: FontWeight.w600)),
         ),

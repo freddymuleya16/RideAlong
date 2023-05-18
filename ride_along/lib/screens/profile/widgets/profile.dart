@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:ride_along/constants/colors.dart';
 
 class ProfileWidget extends StatelessWidget {
   final String imagePath;
@@ -52,14 +53,14 @@ class ProfileWidget extends StatelessWidget {
   }
 
   Widget buildEditIcon(Color color) => buildCircle(
-        color: Colors.white,
+        color: kTextColorLight,
         all: 3,
         child: buildCircle(
           color: color,
           all: 8,
           child: Icon(
             isEdit ? Icons.add_a_photo : Icons.edit,
-            color: Colors.white,
+            color: kTextColorLight,
             size: 20,
           ),
         ),

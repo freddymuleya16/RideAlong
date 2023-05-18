@@ -43,7 +43,7 @@ class _FindTripResultState extends State<FindTripResult> {
                 if (!snapshot.hasData) {
                   return Center(
                     child: CircularProgressIndicator(
-                      color: _isDark ? Colors.white : kSecondaryColor,
+                      color: _isDark ? kTextColorLight : kBackgroundColorDark,
                     ),
                   );
                 }

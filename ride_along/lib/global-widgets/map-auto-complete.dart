@@ -126,13 +126,12 @@ class _MapAutoCompleteWidgetState extends State<MapAutoCompleteWidget> {
           controller: _searchFieldTextController,
           textAlign: TextAlign.left,
           style: GoogleFonts.ubuntu(
-            color: !widget.isDark ? kDarkBackgroundColor : Colors.white,
+            color: !widget.isDark ? kTextColorDark : kTextColorLight,
             fontSize: 15,
             fontWeight: FontWeight.w700,
-            decorationColor:
-                !widget.isDark ? kDarkBackgroundColor : Colors.white,
+            decorationColor: !widget.isDark ? kTextColorDark : kTextColorLight,
           ),
-          cursorColor: !widget.isDark ? kDarkBackgroundColor : Colors.white,
+          cursorColor: !widget.isDark ? kTextColorDark : kTextColorLight,
           //cursorHeight: 35,
           decoration: InputDecoration(
               errorBorder: const OutlineInputBorder(
@@ -145,25 +144,25 @@ class _MapAutoCompleteWidgetState extends State<MapAutoCompleteWidget> {
                 borderSide: BorderSide(
                   color: widget.isDark
                       ? kBackgroundColor.withOpacity(0.75)
-                      : kSecondaryColor.withOpacity(0.75),
+                      : kBackgroundColorDark.withOpacity(0.75),
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: widget.isDark
                       ? kBackgroundColor.withOpacity(0.75)
-                      : kSecondaryColor.withOpacity(0.75),
+                      : kBackgroundColorDark.withOpacity(0.75),
                 ),
               ),
               labelStyle: GoogleFonts.ubuntu(
                   color: !widget.isDark
-                      ? kDarkBackgroundColor.withOpacity(0.75)
-                      : Colors.white.withOpacity(0.75),
+                      ? kBackgroundColorDark.withOpacity(0.75)
+                      : kTextColorLight.withOpacity(0.75),
                   fontSize: 14.0),
               hintStyle: GoogleFonts.ubuntu(
                   color: widget.isDark
-                      ? kDarkBackgroundColor.withOpacity(0.75)
-                      : Colors.white.withOpacity(0.75),
+                      ? kBackgroundColorDark.withOpacity(0.75)
+                      : kTextColorLight.withOpacity(0.75),
                   fontSize: 21.0),
               labelText: widget.hint,
               errorText: widget.errorText)),

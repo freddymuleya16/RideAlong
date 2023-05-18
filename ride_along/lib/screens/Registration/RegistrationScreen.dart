@@ -34,7 +34,7 @@ class _RegistrationSCreenState extends State<RegistrationSCreen> {
     _isDark = isDark(context);
 
     return Scaffold(
-      backgroundColor: _isDark ? kDarkBackgroundColor : kBackgroundColor,
+      backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
       body: SafeArea(
           child: Center(
         child: SingleChildScrollView(
@@ -56,7 +56,7 @@ class _RegistrationSCreenState extends State<RegistrationSCreen> {
                   child: Text(
                     "Welcome to Hiking Buddy",
                     style: GoogleFonts.ubuntu(
-                        color: _isDark ? Colors.white : kSecondaryColor,
+                        color: _isDark ? kTextColorLight : kBackgroundColorDark,
                         fontWeight: FontWeight.w900,
                         fontSize: 16),
                   ),
@@ -145,7 +145,9 @@ class _RegistrationSCreenState extends State<RegistrationSCreen> {
                           child: Text(
                             'Or continue with',
                             style: GoogleFonts.ubuntu(
-                                color: _isDark ? Colors.white : kSecondaryColor,
+                                color: _isDark
+                                    ? kTextColorLight
+                                    : kBackgroundColorDark,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 14),
                           ),
@@ -188,8 +190,8 @@ class _RegistrationSCreenState extends State<RegistrationSCreen> {
                         "Already have an Account?",
                         style: GoogleFonts.ubuntu(
                             color: _isDark
-                                ? Colors.white.withOpacity(0.75)
-                                : kDarkBackgroundColor.withOpacity(0.75),
+                                ? kTextColorLight.withOpacity(0.75)
+                                : kBackgroundColorDark.withOpacity(0.75),
                             fontWeight: FontWeight.w400,
                             fontSize: 16),
                       ),
@@ -205,8 +207,9 @@ class _RegistrationSCreenState extends State<RegistrationSCreen> {
                             child: Text(
                               "Login!",
                               style: GoogleFonts.ubuntu(
-                                  color:
-                                      _isDark ? Colors.white : kSecondaryColor,
+                                  color: _isDark
+                                      ? kTextColorLight
+                                      : kBackgroundColorDark,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 16),
                             ),

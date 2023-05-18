@@ -64,15 +64,15 @@
 //       duration: _animationSpeed,
 //       child: RoundedLoadingButton(
 //         height: 55,
-//         color: isDark ? kBackgroundColor : kSecondaryColor,
+//         color: isDark ? kBackgroundColor : kBackgroundColorDark,
 //         successColor: Colors.greenAccent,
 //         errorColor: Colors.redAccent,
 //         controller: _btnController,
 //         onPressed: _setName,
-//         valueColor: isDark ? kDarkBackgroundColor : Colors.white,
+//         valueColor: isDark ? kTextColorDark: kTextColorLight,
 //         child: Text('continue',
 //             style: GoogleFonts.ubuntu(
-//                 color: isDark ? kDarkBackgroundColor : Colors.white,
+//                 color: isDark ? kTextColorDark: kTextColorLight,
 //                 fontSize: 20,
 //                 fontWeight: FontWeight.w700)),
 //       ),

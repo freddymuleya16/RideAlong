@@ -21,7 +21,7 @@ class LoadingLogo extends StatelessWidget {
             duration: _.animationSpeed,
             padding: _.logoTextpadding,
             child: Icon(Icons.check_circle_outline_rounded,
-                color: isDark ? Colors.white : kSecondaryColor,
+                color: isDark ? kTextColorLight : kBackgroundColorDark,
                 size: MediaQuery.of(context).size.width * 0.75),
           ),
         ),
@@ -31,7 +31,7 @@ class LoadingLogo extends StatelessWidget {
           child: Text(
             "Tasker",
             style: GoogleFonts.ubuntu(
-                color: isDark ? Colors.white : kSecondaryColor,
+                color: isDark ? kTextColorLight : kBackgroundColorDark,
                 fontWeight: FontWeight.w900,
                 fontSize: 30),
           ),

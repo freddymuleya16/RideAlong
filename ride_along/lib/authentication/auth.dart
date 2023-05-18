@@ -28,6 +28,7 @@ class _AuthState extends State<Auth> {
     Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     ).then((value) {
+      Future.delayed(Duration(seconds: 30));
       setState(() {
         initialized = true;
       });

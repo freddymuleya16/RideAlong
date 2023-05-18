@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ride_along/constants/colors.dart';
 
 class AutoCompleteTextField extends StatefulWidget {
   final List<String> options;
@@ -63,7 +64,7 @@ class _AutoCompleteTextFieldState extends State<AutoCompleteTextField> {
         if (_suggestions.isNotEmpty)
           Container(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: kTextColorLight,
               border: Border.all(color: Colors.grey),
               borderRadius: BorderRadius.circular(5),
               boxShadow: [

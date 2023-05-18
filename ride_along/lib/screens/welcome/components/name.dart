@@ -44,13 +44,13 @@ class _WelcomeNameState extends State<WelcomeName> {
         decoration: BoxDecoration(
           color: isDark
               ? kBackgroundColor.withOpacity(0.75)
-              : kSecondaryColor.withOpacity(0.75),
+              : kBackgroundColorDark.withOpacity(0.75),
           borderRadius: BorderRadius.circular(17.5),
           boxShadow: [
             BoxShadow(
               color: isDark
                   ? kBackgroundColor.withOpacity(0.4)
-                  : kSecondaryColor.withOpacity(0.1),
+                  : kBackgroundColorDark.withOpacity(0.1),
               blurRadius: 10,
               spreadRadius: 5,
             ),
@@ -60,12 +60,12 @@ class _WelcomeNameState extends State<WelcomeName> {
             textAlign: TextAlign.center,
             maxLength: 25,
             style: GoogleFonts.ubuntu(
-              color: isDark ? kDarkBackgroundColor : Colors.white,
+              color: isDark ? kTextColorDark : kTextColorLight,
               fontSize: 25,
               fontWeight: FontWeight.w700,
-              decorationColor: isDark ? kDarkBackgroundColor : Colors.white,
+              decorationColor: isDark ? kTextColorDark : kTextColorLight,
             ),
-            cursorColor: isDark ? kDarkBackgroundColor : Colors.white,
+            cursorColor: isDark ? kTextColorDark : kTextColorLight,
             cursorHeight: 35,
             decoration: InputDecoration(
               border: InputBorder.none,
@@ -76,8 +76,8 @@ class _WelcomeNameState extends State<WelcomeName> {
               counterText: '',
               hintStyle: GoogleFonts.ubuntu(
                   color: isDark
-                      ? kDarkBackgroundColor.withOpacity(0.75)
-                      : Colors.white.withOpacity(0.75),
+                      ? kBackgroundColorDark.withOpacity(0.75)
+                      : kTextColorLight.withOpacity(0.75),
                   fontSize: 21.0),
               hintText: "Your nickname...",
             ),

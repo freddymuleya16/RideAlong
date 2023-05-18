@@ -62,15 +62,15 @@ class _LoginButtonState extends State<LoginButton> {
       width: MediaQuery.of(context).size.width - 80,
       borderRadius: 5,
       height: 55,
-      color: isDark ? kBackgroundColor : kSecondaryColor,
+      color: isDark ? kBackgroundColor : kBackgroundColorDark,
       successColor: Colors.greenAccent,
       errorColor: Colors.redAccent,
       controller: widget.btnController,
       onPressed: widget.onPressed,
-      valueColor: isDark ? kDarkBackgroundColor : Colors.white,
+      valueColor: isDark ? kTextColorDark : kTextColorLight,
       child: Text(widget.title,
           style: GoogleFonts.ubuntu(
-              color: isDark ? kDarkBackgroundColor : Colors.white,
+              color: isDark ? kTextColorDark : kTextColorLight,
               fontSize: 20,
               fontWeight: FontWeight.w700)),
     );

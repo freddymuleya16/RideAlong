@@ -7,7 +7,7 @@ setSystemUIOverlayStyle({required SystemUIOverlayStyle systemUIOverlayStyle}) {
   if (systemUIOverlayStyle == SystemUIOverlayStyle.DARK) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        systemNavigationBarColor: kDarkBackgroundColor,
+        systemNavigationBarColor: kBackgroundColorDark,
         systemNavigationBarDividerColor: Colors.transparent,
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.light,
@@ -23,7 +23,7 @@ setSystemUIOverlayStyle({required SystemUIOverlayStyle systemUIOverlayStyle}) {
   } else if (systemUIOverlayStyle == SystemUIOverlayStyle.BLUE) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        systemNavigationBarColor: kSecondaryColor,
+        systemNavigationBarColor: kAccentColor1,
         systemNavigationBarDividerColor: Colors.transparent,
         systemNavigationBarIconBrightness: Brightness.light,
         statusBarIconBrightness: Brightness.light,
@@ -31,7 +31,7 @@ setSystemUIOverlayStyle({required SystemUIOverlayStyle systemUIOverlayStyle}) {
   } else if (systemUIOverlayStyle == SystemUIOverlayStyle.BLUE_DARK) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        systemNavigationBarColor: kDarkBackgroundColor2,
+        systemNavigationBarColor: kBackgroundColorDark,
         systemNavigationBarDividerColor: Colors.transparent,
         systemNavigationBarIconBrightness: Brightness.dark,
         statusBarIconBrightness: Brightness.dark,

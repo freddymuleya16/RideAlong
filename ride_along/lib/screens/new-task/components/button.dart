@@ -72,8 +72,8 @@
 //                           Text('New task',
 //                               style: GoogleFonts.ubuntu(
 //                                   color: _isDark
-//                                       ? kDarkBackgroundColor2
-//                                       : Colors.white,
+//                                       ? kBackgroundColorDark
+//                                       : kTextColorLight,
 //                                   fontSize: 20,
 //                                   fontWeight: FontWeight.w700)),
 //                           SizedBox(width: 10),
@@ -81,12 +81,12 @@
 //                             FontAwesomeIcons.chevronUp,
 //                             size: 20,
 //                             color:
-//                                 _isDark ? kDarkBackgroundColor2 : Colors.white,
+//                                 _isDark ? kTextColorDark: kTextColorLight,
 //                           )
 //                         ],
 //                       ),
 //                       height: 63,
-//                       color: _isDark ? Colors.white : kSecondaryColor,
+//                       color: _isDark ? kTextColorLight : kBackgroundColorDark,
 //                       successColor: Colors.greenAccent,
 //                       errorColor: Colors.redAccent,
 //                       controller: _btnController,
@@ -94,7 +94,7 @@
 //                         _add(newTaskController: __);
 //                       },
 //                       valueColor:
-//                           _isDark ? kDarkBackgroundColor2 : Colors.white,
+//                           _isDark ? kTextColorDark: kTextColorLight,
 //                     ),
 //                   ),
 //                 ]),

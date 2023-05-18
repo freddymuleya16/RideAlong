@@ -38,7 +38,7 @@ class MessageListItem extends StatelessWidget {
                 builder: (builder) =>
                     ChatScreen(userUid: userId, friendUid: senderID))),
         child: SizedBox(
-          //decoration: BoxDecoration(color: Colors.white),
+          //decoration: BoxDecoration(color: kTextColorLight),
           height: 60,
           child: Container(
             //color: Colors.red.shade400,
@@ -50,8 +50,8 @@ class MessageListItem extends StatelessWidget {
                   indent: 90,
                   thickness: 0.2,
                   color: !isDark
-                      ? kDarkBackgroundColor.withOpacity(0.75)
-                      : Colors.white.withOpacity(0.75),
+                      ? kBackgroundColorDark.withOpacity(0.75)
+                      : kTextColorLight.withOpacity(0.75),
                 ),
                 SizedBox(
                   height: 10,
@@ -85,8 +85,8 @@ class MessageListItem extends StatelessWidget {
                                   friend,
                                   style: GoogleFonts.ubuntu(
                                       color: isDark
-                                          ? Colors.white
-                                          : kSecondaryColor,
+                                          ? kTextColorLight
+                                          : kBackgroundColorDark,
                                       fontWeight: FontWeight.w900,
                                       fontSize: 15),
                                 ),
@@ -104,8 +104,8 @@ class MessageListItem extends StatelessWidget {
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.ubuntu(
                                           color: isDark
-                                              ? Colors.white
-                                              : kSecondaryColor,
+                                              ? kTextColorLight
+                                              : kBackgroundColorDark,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 12),
                                     ),
@@ -115,8 +115,8 @@ class MessageListItem extends StatelessWidget {
                                     textAlign: TextAlign.end,
                                     style: GoogleFonts.ubuntu(
                                         color: isDark
-                                            ? Colors.white
-                                            : kSecondaryColor,
+                                            ? kTextColorLight
+                                            : kBackgroundColorDark,
                                         fontWeight: FontWeight.w600,
                                         fontSize: 12),
                                   ),
@@ -137,8 +137,8 @@ class MessageListItem extends StatelessWidget {
                   height: 0.2,
                   thickness: 0.2,
                   color: !isDark
-                      ? kDarkBackgroundColor.withOpacity(0.75)
-                      : Colors.white.withOpacity(0.75),
+                      ? kBackgroundColorDark.withOpacity(0.75)
+                      : kTextColorLight.withOpacity(0.75),
                 ),
               ],
             ),

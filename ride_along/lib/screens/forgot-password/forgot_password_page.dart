@@ -40,7 +40,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget build(BuildContext context) {
     bool _isDark = isDark(context);
     return Scaffold(
-      backgroundColor: _isDark ? kDarkBackgroundColor : kBackgroundColor,
+      backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
       body: SafeArea(
           child: Center(
         child: Column(
@@ -58,7 +58,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             Text(
               "Ooops forgot your password?",
               style: GoogleFonts.ubuntu(
-                  color: _isDark ? Colors.white : kSecondaryColor,
+                  color: _isDark ? kTextColorLight : kBackgroundColorDark,
                   fontWeight: FontWeight.w900,
                   fontSize: 16),
             ),
@@ -94,7 +94,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                         child: Text(
                           "Login",
                           style: GoogleFonts.ubuntu(
-                              color: _isDark ? Colors.white : kSecondaryColor,
+                              color: _isDark
+                                  ? kTextColorLight
+                                  : kBackgroundColorDark,
                               fontWeight: FontWeight.w700,
                               fontSize: 14),
                         ),

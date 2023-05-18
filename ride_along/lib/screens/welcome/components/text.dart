@@ -39,7 +39,7 @@ class _WelcomeTextState extends State<WelcomeText> {
               padding: _padding,
               child: Text("welcome",
                   style: GoogleFonts.ubuntu(
-                      color: isDark ? kBackgroundColor : kSecondaryColor,
+                      color: isDark ? kBackgroundColor : kBackgroundColorDark,
                       fontWeight: FontWeight.w800,
                       fontSize: 66))),
         ),
@@ -54,7 +54,7 @@ class _WelcomeTextState extends State<WelcomeText> {
               style: GoogleFonts.ubuntu(
                   color: isDark
                       ? kBackgroundColor.withOpacity(0.85)
-                      : kSecondaryColor.withOpacity(0.85),
+                      : kBackgroundColorDark.withOpacity(0.85),
                   fontWeight: FontWeight.w800,
                   fontSize: 15)),
         )),

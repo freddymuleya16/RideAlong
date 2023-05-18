@@ -41,9 +41,9 @@ class _HomeFloatingButtonState extends State<HomeFloatingButton> {
         child: Icon(
           Icons.add_rounded,
           size: _isDark ? 33 : 30,
-          color: _isDark ? kDarkPrimaryColor : Colors.white,
+          color: _isDark ? kPrimaryColorDark : kTextColorLight,
         ),
-        backgroundColor: _isDark ? kBackgroundColor : kSecondaryColor,
+        backgroundColor: _isDark ? kBackgroundColor : kBackgroundColorDark,
         highlightElevation: 3,
       ),
     );

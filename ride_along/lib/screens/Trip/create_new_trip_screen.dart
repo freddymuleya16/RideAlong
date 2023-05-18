@@ -63,7 +63,7 @@ class _CreateNewTripPageState extends State<CreateNewTripPage> {
     };
     return Container(
       decoration: BoxDecoration(
-        color: _isDark ? kDarkBackgroundColor2 : kBackgroundColor,
+        color: _isDark ? kBackgroundColorDark : kBackgroundColor,
       ),
       width: double.maxFinite,
       child: Stepper(
@@ -83,8 +83,8 @@ class _CreateNewTripPageState extends State<CreateNewTripPage> {
                                 return Center(
                                   child: CircularProgressIndicator(
                                     color: _isDark
-                                        ? Colors.white
-                                        : kSecondaryColor,
+                                        ? kTextColorLight
+                                        : kBackgroundColorDark,
                                   ),
                                 );
                               });

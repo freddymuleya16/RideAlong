@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:ride_along/constants/colors.dart';
 
 class SquireTile extends StatelessWidget {
   final String imagePath;
@@ -22,7 +23,7 @@ class SquireTile extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
+                  border: Border.all(color: kTextColorLight),
                   color: Colors.grey[200],
                   borderRadius: BorderRadius.circular(16)),
               child: Image.asset(

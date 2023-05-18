@@ -45,12 +45,11 @@ class TripTile extends StatelessWidget {
                         padding: const EdgeInsets.all(0),
                         decoration: BoxDecoration(
                             border: const Border.symmetric(),
-                            color: isDark
-                                ? kDarkBackgroundColor.withOpacity(0.75)
-                                : Colors.grey[300],
+                            color: isDark ? kAccentColor1 : kAccentColor3,
                             borderRadius: BorderRadius.circular(16)),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 0.0, vertical: 0),
                           child: Column(
                             children: [
                               Padding(
@@ -64,8 +63,8 @@ class TripTile extends StatelessWidget {
                                         style: GoogleFonts.ubuntu(
                                           fontSize: 14,
                                           color: isDark
-                                              ? kBackgroundColor
-                                              : Colors.black,
+                                              ? kTextColorLight
+                                              : kTextColorDark,
                                           fontWeight: FontWeight.w700,
                                         ),
                                       ),
@@ -73,8 +72,8 @@ class TripTile extends StatelessWidget {
                                     Icon(
                                       Icons.drive_eta,
                                       color: isDark
-                                          ? kBackgroundColor
-                                          : Colors.black,
+                                          ? kTextColorLight
+                                          : kTextColorDark,
                                     ),
                                     Expanded(
                                       child: Text(
@@ -83,8 +82,8 @@ class TripTile extends StatelessWidget {
                                         style: GoogleFonts.ubuntu(
                                           fontSize: 14,
                                           color: isDark
-                                              ? kBackgroundColor
-                                              : Colors.black,
+                                              ? kTextColorLight
+                                              : kTextColorDark,
                                           fontWeight: FontWeight.w700,
                                         ),
                                       ),
@@ -104,8 +103,11 @@ class TripTile extends StatelessWidget {
                                     width: 18,
                                     child: Container(
                                         decoration: BoxDecoration(
+                                      border: const Border.symmetric(
+                                          horizontal: BorderSide.none,
+                                          vertical: BorderSide.none),
                                       color: isDark
-                                          ? kDarkBackgroundColor2
+                                          ? kBackgroundColorDark
                                           : kBackgroundColor,
                                       borderRadius: const BorderRadius.only(
                                           bottomRight: Radius.circular(100),
@@ -126,8 +128,9 @@ class TripTile extends StatelessWidget {
                                           style: GoogleFonts.ubuntu(
                                             fontSize: 14,
                                             color: isDark
-                                                ? kBackgroundColor
-                                                : Colors.grey[700],
+                                                ? kTextColorLight
+                                                    .withOpacity(0.6)
+                                                : kTextColorDark,
                                             fontWeight: FontWeight.w700,
                                           ),
                                         )
@@ -138,8 +141,8 @@ class TripTile extends StatelessWidget {
                                     style: GoogleFonts.ubuntu(
                                       fontSize: 13,
                                       color: isDark
-                                          ? kBackgroundColor
-                                          : Colors.black,
+                                          ? kTextColorLight
+                                          : kTextColorDark,
                                     ),
                                   ),
                                   Expanded(
@@ -154,8 +157,9 @@ class TripTile extends StatelessWidget {
                                           style: GoogleFonts.ubuntu(
                                             fontSize: 14,
                                             color: isDark
-                                                ? kBackgroundColor
-                                                : Colors.grey[700],
+                                                ? kTextColorLight
+                                                    .withOpacity(0.6)
+                                                : kTextColorDark,
                                             fontWeight: FontWeight.w700,
                                           ),
                                         )
@@ -168,8 +172,10 @@ class TripTile extends StatelessWidget {
                                     width: 18,
                                     child: Container(
                                         decoration: BoxDecoration(
+                                      border: Border.all(
+                                          width: 20, color: Colors.white),
                                       color: isDark
-                                          ? kDarkBackgroundColor2
+                                          ? kBackgroundColorDark
                                           : kBackgroundColor,
                                       borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(100),
@@ -192,8 +198,8 @@ class TripTile extends StatelessWidget {
                                         style: GoogleFonts.ubuntu(
                                           fontSize: 14,
                                           color: isDark
-                                              ? kBackgroundColor
-                                              : Colors.black,
+                                              ? kTextColorLight
+                                              : kTextColorDark,
                                           fontWeight: FontWeight.w700,
                                         ),
                                       ),
@@ -205,8 +211,8 @@ class TripTile extends StatelessWidget {
                                         style: GoogleFonts.ubuntu(
                                           fontSize: 14,
                                           color: isDark
-                                              ? kBackgroundColor
-                                              : Colors.black,
+                                              ? kTextColorLight
+                                              : kTextColorDark,
                                           fontWeight: FontWeight.w700,
                                         ),
                                       ),

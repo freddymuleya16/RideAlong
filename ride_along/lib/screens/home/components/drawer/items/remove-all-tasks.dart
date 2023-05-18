@@ -13,7 +13,7 @@
 //     return StatefulBuilder(
 //       builder: (context, setState) {
 //         return AlertDialog(
-//           backgroundColor: _isDark ? kDarkBackgroundColor2 : kBackgroundColor,
+//           backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
 //           shape: RoundedRectangleBorder(
 //             borderRadius: BorderRadius.circular(20),
 //           ),
@@ -22,7 +22,7 @@
 //             style: GoogleFonts.ubuntu(
 //                 fontSize: 22.5,
 //                 fontWeight: FontWeight.w600,
-//                 color: _isDark ? kBackgroundColor : kDarkBackgroundColor),
+//                 color: _isDark ? kBackgroundColor : kBackgroundColorDark),
 //           ),
 //           content: Text(
 //             "All tasks will be deleted.",
@@ -31,7 +31,7 @@
 //                 fontWeight: FontWeight.w500,
 //                 color: _isDark
 //                     ? kBackgroundColor.withOpacity(0.8)
-//                     : kDarkBackgroundColor.withOpacity(0.8)),
+//                     : kBackgroundColorDark.withOpacity(0.8)),
 //           ),
 //           actions: [
 //             TextButton(
@@ -42,7 +42,7 @@
 //                     fontWeight: FontWeight.w500,
 //                     color: _isDark
 //                         ? kBackgroundColor.withOpacity(0.9)
-//                         : kDarkBackgroundColor),
+//                         : kBackgroundColorDark),
 //               ),
 //               onPressed: () {
 //                 Navigator.pop(context);

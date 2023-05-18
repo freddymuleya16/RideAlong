@@ -69,12 +69,12 @@ class _CustomInputFieldState extends State<CustomInputField> {
           //maxLength: 25,
           onTap: widget.onTap,
           style: GoogleFonts.ubuntu(
-            color: !isDark ? kDarkBackgroundColor : Colors.white,
+            color: !isDark ? kTextColorDark : kTextColorLight,
             fontSize: 15,
             fontWeight: FontWeight.w700,
-            decorationColor: !isDark ? kDarkBackgroundColor : Colors.white,
+            decorationColor: !isDark ? kTextColorDark : kTextColorLight,
           ),
-          cursorColor: !isDark ? kDarkBackgroundColor : Colors.white,
+          cursorColor: !isDark ? kTextColorDark : kTextColorLight,
           //cursorHeight: 35,
           decoration: InputDecoration(
               suffixIcon: widget.obscure
@@ -83,7 +83,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
                         _isObscure ? Icons.visibility_off : Icons.visibility,
                         color: isDark
                             ? kBackgroundColor.withOpacity(0.75)
-                            : kSecondaryColor.withOpacity(0.75),
+                            : kBackgroundColorDark.withOpacity(0.75),
                       ),
                       onPressed: () {
                         setState(() {
@@ -102,25 +102,25 @@ class _CustomInputFieldState extends State<CustomInputField> {
                 borderSide: BorderSide(
                   color: isDark
                       ? kBackgroundColor.withOpacity(0.75)
-                      : kSecondaryColor.withOpacity(0.75),
+                      : kBackgroundColorDark.withOpacity(0.75),
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: isDark
                       ? kBackgroundColor.withOpacity(0.75)
-                      : kSecondaryColor.withOpacity(0.75),
+                      : kBackgroundColorDark.withOpacity(0.75),
                 ),
               ),
               labelStyle: GoogleFonts.ubuntu(
                   color: !isDark
-                      ? kDarkBackgroundColor.withOpacity(0.75)
-                      : Colors.white.withOpacity(0.75),
+                      ? kBackgroundColorDark.withOpacity(0.75)
+                      : kTextColorLight.withOpacity(0.75),
                   fontSize: 14.0),
               hintStyle: GoogleFonts.ubuntu(
                   color: isDark
-                      ? kDarkBackgroundColor.withOpacity(0.75)
-                      : Colors.white.withOpacity(0.75),
+                      ? kBackgroundColorDark.withOpacity(0.75)
+                      : kTextColorLight.withOpacity(0.75),
                   fontSize: 21.0),
               labelText: widget.name,
               errorText: widget.errorText)),

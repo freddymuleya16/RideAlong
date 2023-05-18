@@ -46,7 +46,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
         : setSystemUIOverlayStyle(
             systemUIOverlayStyle: SystemUIOverlayStyle.LIGHT);
     return Scaffold(
-        backgroundColor: _isDark ? kDarkBackgroundColor : kBackgroundColor,
+        backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
         body: Padding(
             padding: const EdgeInsets.only(left: 50, right: 45),
             child: Column(

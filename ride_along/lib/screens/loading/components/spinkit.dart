@@ -15,7 +15,7 @@ class LoadingSpinkit extends StatelessWidget {
       opacity: _.spinkitOpacity,
       duration: const Duration(milliseconds: 666),
       child: SpinKitWave(
-        color: isDark ? Colors.white : kSecondaryColor,
+        color: isDark ? kTextColorLight : kBackgroundColorDark,
         size: 30,
       ),
     );

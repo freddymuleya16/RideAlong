@@ -67,7 +67,7 @@ class _UserTileState extends State<UserTile> {
     if (user == null) {
       return Center(
         child: CircularProgressIndicator(
-          color: _isDark ? Colors.white : kSecondaryColor,
+          color: _isDark ? kTextColorLight : kBackgroundColorDark,
         ),
       );
     }
@@ -101,7 +101,7 @@ class _UserTileState extends State<UserTile> {
                       blurRadius: 0.001,
                     )
                   ],
-                  color: _isDark ? kDarkBackgroundColor : Colors.grey[300]),
+                  color: _isDark ? kBackgroundColorDark : Colors.grey[300]),
               child: Row(
                 children: [
                   Padding(
@@ -110,13 +110,13 @@ class _UserTileState extends State<UserTile> {
                         scale: 1.2,
                         child: Icon(
                           Icons.person,
-                          color: _isDark ? Colors.white : kPrimaryColor,
+                          color: _isDark ? kTextColorLight : kPrimaryColor,
                         )),
                   ),
                   Text(
                     "${user!.firstname} ${user!.lastname}",
                     style: GoogleFonts.ubuntu(
-                      color: _isDark ? Colors.white : kPrimaryColor,
+                      color: _isDark ? kTextColorLight : kPrimaryColor,
                       fontWeight: FontWeight.w500,
                       fontSize: 17.5,
                     ),
@@ -139,7 +139,7 @@ class _UserTileState extends State<UserTile> {
           padding: EdgeInsets.only(left: 25, right: 5),
           child: Icon(
             FontAwesomeIcons.check,
-            color: Colors.white,
+            color: kTextColorLight,
             size: 22.5,
           ),
         ),
@@ -148,7 +148,7 @@ class _UserTileState extends State<UserTile> {
           child: Text(
             'Accept',
             style: GoogleFonts.ubuntu(
-              color: Colors.white,
+              color: kTextColorLight,
               fontWeight: FontWeight.w500,
               fontSize: 17.5,
             ),
@@ -169,7 +169,7 @@ class _UserTileState extends State<UserTile> {
           padding: EdgeInsets.only(left: 25, right: 5),
           child: Icon(
             FontAwesomeIcons.ban,
-            color: Colors.white,
+            color: kTextColorLight,
             size: 22.5,
           ),
         ),
@@ -178,7 +178,7 @@ class _UserTileState extends State<UserTile> {
           child: Text(
             'Reject',
             style: GoogleFonts.ubuntu(
-              color: Colors.white,
+              color: kTextColorLight,
               fontWeight: FontWeight.w500,
               fontSize: 17.5,
             ),

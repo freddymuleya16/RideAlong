@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ride_along/constants/colors.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String text;
@@ -14,7 +15,7 @@ class ButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) => ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: StadiumBorder(),
-          onPrimary: Colors.white,
+          onPrimary: kTextColorLight,
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
         child: Text(text),

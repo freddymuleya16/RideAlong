@@ -80,7 +80,7 @@ class DetailsUtils {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircularProgressIndicator(
-              color: _isDark ? Colors.white : kSecondaryColor,
+              color: _isDark ? kTextColorLight : kBackgroundColorDark,
             ),
             SizedBox(width: 10),
           ],

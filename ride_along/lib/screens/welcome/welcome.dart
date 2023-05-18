@@ -20,7 +20,7 @@
 //         : setSystemUIOverlayStyle(
 //             systemUIOverlayStyle: SystemUIOverlayStyle.LIGHT);
 //     return Scaffold(
-//         backgroundColor: _isDark ? kDarkBackgroundColor : kBackgroundColor,
+//         backgroundColor: _isDark ? kBackgroundColorDark : kBackgroundColor,
 //         body: Column(
 //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
 //           children: [

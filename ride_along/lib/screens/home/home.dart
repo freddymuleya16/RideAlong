@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // startHomeAnimations(homeAnimationsController: homeAnimationsController);
 
     return AdvancedDrawer(
-      backdropColor: isDark ? kDarkBackgroundColor : kSecondaryColor,
+      backdropColor: isDark ? kPrimaryColorDark : kPrimaryColor,
       controller: drawer.advancedDrawerController,
       animationCurve: Curves.easeInOut,
       animationDuration: const Duration(milliseconds: 300),
@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       drawer: HomeDrawer(),
       child: Scaffold(
-        backgroundColor: isDark ? kDarkBackgroundColor2 : kBackgroundColor,
+        backgroundColor: isDark ? kBackgroundColorDark : kBackgroundColor,
         body: SafeArea(
             child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),

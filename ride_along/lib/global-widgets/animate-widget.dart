@@ -1,15 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class AnimateWidget extends StatefulWidget {
   final int seconds;
-
   final Widget? child;
 
-  const AnimateWidget({super.key, required this.seconds, this.child});
+  const AnimateWidget({Key? key, required this.seconds, this.child})
+      : super(key: key);
 
   @override
   State<AnimateWidget> createState() => _AnimateWidgetState();
@@ -17,16 +15,15 @@ class AnimateWidget extends StatefulWidget {
 
 class _AnimateWidgetState extends State<AnimateWidget> {
   Duration _animationDuration = const Duration(seconds: 750);
-
   double _opacity = 0;
+  Timer? _timer;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _animationDuration = Duration(seconds: widget.seconds);
 
-    Timer(Duration(seconds: widget.seconds), () {
+    _timer = Timer(Duration(seconds: widget.seconds), () {
       if (mounted) {
         setState(() {
           _opacity = 1.0;
@@ -36,8 +33,17 @@ class _AnimateWidgetState extends State<AnimateWidget> {
   }
 
   @override
+  void dispose() {
+    _timer?.cancel(); // Cancel the timer if it is active
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
-        opacity: _opacity, duration: _animationDuration, child: widget.child);
+      opacity: _opacity,
+      duration: _animationDuration,
+      child: widget.child,
+    );
   }
 }

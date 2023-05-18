@@ -39,7 +39,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             if (!snapshot.hasData) {
               return Center(
                 child: CircularProgressIndicator(
-                  color: _isDark ? Colors.white : kSecondaryColor,
+                  color: _isDark ? kTextColorLight : kBackgroundColorDark,
                 ),
               );
             }

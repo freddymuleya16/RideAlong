@@ -100,7 +100,7 @@ class _HomeTasksItemsState extends State<HomeTasksItems> {
                       style: GoogleFonts.ubuntu(
                           color: _isDark
                               ? kBackgroundColor.withOpacity(0.8)
-                              : kSecondaryColor,
+                              : kBackgroundColorDark,
                           fontSize: 22.2,
                           fontWeight: FontWeight.w700),
                     ),
@@ -110,14 +110,14 @@ class _HomeTasksItemsState extends State<HomeTasksItems> {
                         height: MediaQuery.of(context).size.width - 100,
                         color: _isDark
                             ? kBackgroundColor.withOpacity(0.8)
-                            : kSecondaryColor,
+                            : kBackgroundColorDark,
                         illustration: UnDrawIllustration.not_found,
                         placeholder: Padding(
                           padding: const EdgeInsets.only(top: 100),
                           child: SpinKitDoubleBounce(
                             color: _isDark
                                 ? kBackgroundColor.withOpacity(0.8)
-                                : kSecondaryColor,
+                                : kBackgroundColorDark,
                             size: 75,
                           ),
                         ),

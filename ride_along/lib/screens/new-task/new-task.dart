@@ -34,7 +34,7 @@
 //         return await closePage(context);
 //       },
 //       child: Scaffold(
-//         backgroundColor: _isDark ? kDarkBackgroundColor2 : Colors.white,
+//         backgroundColor: _isDark ? kTextColorDark: kTextColorLight,
 //         body: SafeArea(
 //           child: Column(
 //             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -43,7 +43,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     if (user == null) {
       return Center(
         child: CircularProgressIndicator(
-          color: _isDark ? Colors.white : kSecondaryColor,
+          color: _isDark ? kTextColorLight : kBackgroundColorDark,
         ),
       );
     }

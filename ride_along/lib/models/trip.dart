@@ -67,7 +67,7 @@ class Trip {
       car: Car.fromMap(map['car'] as Map<String, dynamic>),
       status: TripStatus.values[map['status'] as int],
       duration: map['duration'] as String,
-      price: map['price'] as double,
+      price: map['price'].toDouble(),
     );
   }
 
@@ -88,7 +88,7 @@ class Trip {
       'car': car.toMap(),
       'status': status.index,
       'duration': duration,
-      'price': price
+      'price': price.toStringAsPrecision(2)
     };
   }
 }
